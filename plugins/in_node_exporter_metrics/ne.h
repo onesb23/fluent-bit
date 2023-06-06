@@ -66,6 +66,7 @@ struct flb_ne {
     int filefd_scrape_interval;
     int textfile_scrape_interval;
     int systemd_scrape_interval;
+    int thermalzone_scrape_interval;
 
     int coll_cpu_fd;                                    /* collector fd (cpu)    */
     int coll_cpufreq_fd;                                /* collector fd (cpufreq)  */
@@ -81,6 +82,7 @@ struct flb_ne {
     int coll_filefd_fd;                                 /* collector fd (filefd)    */
     int coll_textfile_fd;                               /* collector fd (textfile)  */
     int coll_systemd_fd ;                               /* collector fd (systemd)  */
+    int coll_thermalzone_fd;                            /* collector fd (thermalzone) */
 
     /*
      * Metrics Contexts
@@ -186,6 +188,11 @@ struct flb_ne {
     struct flb_regex   *systemd_regex_exclude_list;
     double              libsystemd_version;
     char               *libsystemd_version_text;
+
+    /* thermal zone */
+    struct cmt_gauge   *thermalzone_temp;
+    struct cmt_gauge   *cooling_device_cur_state;
+    struct cmt_gauge   *cooling_device_max_state;
 };
 
 #endif

@@ -13,6 +13,7 @@ set(src
   ne_textfile.c
   ne_utils.c
   ne_config.c
+  ne_thermalzone_linux.c
   ne.c
   )
 
