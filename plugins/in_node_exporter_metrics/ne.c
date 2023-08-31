@@ -722,7 +722,7 @@ static int in_ne_init(struct flb_input_instance *in,
                     }
                     ne_systemd_init(ctx);
                 }
-		else if (strncmp(entry->str, "thermal_zone", 12) == 0) {
+                else if (strncmp(entry->str, "thermal_zone", 12) == 0) {
                     if (ctx->thermalzone_scrape_interval == 0) {
                         flb_plg_debug(ctx->ins, "enabled metrics %s", entry->str);
                         metric_idx = 14;
