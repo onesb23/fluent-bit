@@ -185,7 +185,7 @@ option(FLB_IN_SYSLOG                   "Enable Syslog input plugin"             
 option(FLB_IN_TAIL                     "Enable Tail input plugin"                     Yes)
 option(FLB_IN_UDP                      "Enable UDP input plugin"                      Yes)
 option(FLB_IN_TCP                      "Enable TCP input plugin"                      Yes)
-option(FLB_IN_UNIX_SOCKET              "Enable Unix socket input plugin"               No)
+option(FLB_IN_UNIX_SOCKET              "Enable Unix socket input plugin"              Yes)
 option(FLB_IN_MQTT                     "Enable MQTT Broker input plugin"              Yes)
 option(FLB_IN_HEAD                     "Enable Head input plugin"                     Yes)
 option(FLB_IN_PROC                     "Enable Process input plugin"                  Yes)
